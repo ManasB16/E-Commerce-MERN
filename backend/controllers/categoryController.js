@@ -60,8 +60,8 @@ const listCategories = async (req, res, next) => {
 
 const readCategory = async (req, res, next) => {
   try {
-    const { id } = req.params;
-    const specificCategory = await Category.findById(id);
+    const { categoryId } = req.params;
+    const specificCategory = await Category.findById(categoryId);
     res.json(specificCategory);
   } catch (err) {
     console.log(err);
